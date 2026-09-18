@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "music-manager"
+version = "1.0.0"
+description = "Music library manager with ID3 tag editing and device synchronization"
+authors = ["Your Name <your.email@example.com>"]
+readme = "README.md"
+packages = [{include = "music_manager"}]
+
+[tool.poetry.dependencies]
+python = "3.14.7"
+PySide6 = "6.11.2"
+mutagen = "1.48.0"
+pathvalidate = "3.3.1"
+
+[tool.poetry.scripts]
+music-manager = "music_manager.main:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
